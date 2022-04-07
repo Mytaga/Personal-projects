@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./src/app.js" type="module"></script>
+    <title>Football Teams</title>
+</head>
+<body>
+    <div id="container">
+
+        <header id="site-header">
+            
+            <nav class="navbar">
+                <section class="navbar-dashboard">
+                    <a href="/dashboard">Dashboard</a>
+                    
+                    <div id="guest">
+                        <a class="button" href="/login">Login</a>
+                        <a class="button" href="/register">Register</a>
+                    </div>
+                    
+                    <div id="user">
+                        <span>Welcome, {email}</span>
+                        <a class="button" href="/myBooks">My Teams</a>
+                        <a class="button" href="/addBook">Add Team</a>
+                        <a class="button" href="/logout">Logout</a>
+                    </div>
+                </section>
+            </nav>
+        </header>
+        <main id="content"></main>
+
+        <footer id="site-footer">
+            <p>@Football teams generator</p>
+        </footer>
+    </div>
+</body>
+</html>
