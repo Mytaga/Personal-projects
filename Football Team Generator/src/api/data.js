@@ -4,8 +4,8 @@ const login = api.login;
 const register = api.register;
 const logout = api.logout;
 
-async function getAllBooks(){
-    return api.get('/data/books?sortBy=_createdOn%20desc');
+async function getAllTeams(){
+    return api.get('/data/teams?sortBy=_createdOn%20desc');
 };
 
 async function createBook(data){
@@ -40,7 +40,7 @@ export {
     login,
     register,
     logout,
-    getAllBooks,
+    getAllTeams,
     createBook,
     getBookById,
     editBook,

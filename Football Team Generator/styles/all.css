@@ -1,5 +1,5 @@
 body {
-    background-image: url("../images/WallpaperDog-17141476.jpg");
+    background-image: url("../images/138259_mild-summary-wallpapers-hd-images-new_1600x1200_h.webp");
     padding: 0px;
     margin: 0px;
     height: 100%;
@@ -42,7 +42,7 @@ body {
     border-radius: 1rem;
     text-decoration: none;
     font-weight: bold;
-    background: rgba(240, 128, 231, 0.507);
+    background: rgba(128, 240, 221, 0.507);
     color: rgb(255, 255, 255);
     border: none;
     font-size: 1rem;
@@ -121,8 +121,9 @@ img {
 }
 
 .basic h1,
+.dashboard,
 .my-books h1,
-.dashboard h1 {
+.home h1 {
     text-align: center;
     margin: 0rem;
     padding: 2rem 0 1rem 0;
@@ -171,7 +172,7 @@ div.actions a {
 footer {
     margin-top: auto;
     text-align: center;
-    background: #234465;
+    background: #23654b;
 }
 
 footer p {
@@ -226,4 +227,10 @@ textarea#description {
     font-size: 20px;
     text-shadow:4px 4px 8px blue;
     text-align: center;
+}
+.home {
+    font-size: 50px;
+    color: rgba(0, 128, 0, 0.319);
+    font-style:normal;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
