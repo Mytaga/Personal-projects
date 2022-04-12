@@ -66,19 +66,19 @@ li {
 }
 
 .img {
-    width: 15rem;
+    width: 12rem;
     position: relative;
     overflow: hidden;
     padding: 0rem;
 }
 
 img {
-    display: block;
+    display: flex;
     position: absolute;
     left: 0;
     right: 0;
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -107,7 +107,7 @@ img {
 }
 
 .dashboard>nav>ul {
-    display: flex;
+    display: inline-flex;
 
 }
 
@@ -159,7 +159,7 @@ div.actions a {
 
 .my-teams .my-teams-list,
 .dashboard .other-teams-list {
-    display: flex;
+    display: inline-flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }

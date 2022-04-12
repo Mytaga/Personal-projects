@@ -8,32 +8,32 @@ async function getAllTeams(){
     return api.get('/data/teams?sortBy=_createdOn%20desc');
 };
 
-async function createBook(data){
-    return api.post('/data/books', data);
+async function createTeam(team){
+    return api.post('/data/teams', team);
 };
 
-async function getBookById(id){
-    return api.get('/data/books/' + id);
+async function getTeamById(id){
+    return api.get('/data/teams/' + id);
 };
 
-async function editBook(id, data){
-    return api.put('/data/books/' + id, data);
+async function editTeam(id, data){
+    return api.put('/data/teams/' + id, data);
 };
 
-async function deleteBookById(id){
-    return api.del('/data/books/' + id);
+async function deleteTeamById(id){
+    return api.del('/data/teams/' + id);
 };
 
-async function getMyBooks(userId){
-    return api.get(`/data/books?where=_ownerId%3D%22${userId}%22&sortBy=_createdOn%20desc`);
+async function getMyTeams(ownerId){
+    return api.get(`/data/teams?where=_ownerId%3D%22${ownerId}%22&sortBy=_createdOn%20desc`);
 };
 
-async function addLike(bookId){
-    return api.post('/data/likes', {bookId});
+async function addLike(teamId){
+    return api.post('/data/likes', {teamId});
 };
 
-async function getAllLikes(bookId){
-    return api.get(`/data/likes?where=bookId%3D%22${bookId}%22&distinct=_ownerId&count`);
+async function getAllLikes(teamId){
+    return api.get(`/data/likes?where=teamId%3D%22${teamId}%22&distinct=_ownerId&count`);
 }
 
 export {
@@ -41,11 +41,11 @@ export {
     register,
     logout,
     getAllTeams,
-    createBook,
-    getBookById,
-    editBook,
-    deleteBookById,
-    getMyBooks,
+    createTeam,
+    getTeamById,
+    editTeam,
+    deleteTeamById,
+    getMyTeams,
     addLike,
     getAllLikes
 }

@@ -52,9 +52,9 @@ export function createView(ctx){
         const titles = formData.get('titles');
         const imageUrl = formData.get('imageUrl');
         const nationality = formData.get('nationality');
-        const statium = formData.get('stadium');
+        const stadium = formData.get('stadium');
 
-        if (name == '' || titles == '' || imageUrl == '' || nationality == '' || statium == ''){
+        if (name == '' || titles == '' || imageUrl == '' || nationality == '' || stadium == ''){
             return alert('Please fill all fields');
         }
 
@@ -63,7 +63,7 @@ export function createView(ctx){
             titles,
             imageUrl,
             nationality,
-            statium
+            stadium
         }
 
         await createTeam(data);

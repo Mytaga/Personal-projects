@@ -1356,6 +1356,24 @@
                 'nationality': 'England',
                 'stadium' : 'Stamford Bridge',
                 '_createdOn': 1617799658349
+            },
+            '6f415c4f-ab39-4d36-badb-2ad69da9c830': {
+                '_ownerId': '847ec027-f659-4086-8032-5173e2f9c93a',
+                'name': 'Real Madrid',
+                'titles': '34',
+                'imageUrl': '/images/ARMAN_Khanoyan.png',
+                'nationality': 'Spain',
+                'stadium' : 'Santiago Bernabeu',
+                '_createdOn': 1617799658349
+            },
+            '5j415c4f-ab39-4d36-badb-2ad29da8c830': {
+                '_ownerId': '847ec027-f659-4086-8032-5173e2f9c93a',
+                'name': 'Barcelona',
+                'titles': '26',
+                'imageUrl': '/images/FC_Barcelona_(crest).svg.png',
+                'nationality': 'Spain',
+                'stadium' : 'Camp Nou',
+                '_createdOn': 1617799658349
             }
         },
         likes: {
