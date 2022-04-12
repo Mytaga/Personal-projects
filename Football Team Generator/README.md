@@ -1,1 +1,7 @@
-A simple application for creating football teams.
+A simple application for creating football teams. 
+Functionality :
+- Add a specific team
+- Edit team 
+- Delete team
+- Has a collection of my teams /created by the author/
+- Like team
