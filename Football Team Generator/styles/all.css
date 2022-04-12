@@ -88,11 +88,11 @@ img {
     padding-top: 100%;
 }
 
-.detailsOtherBooks,
+.detailsOtherTeams,
 .detailsMyBooks,
 .deleteBook,
-.otherBooks,
-.myBooks {
+.otherTeams,
+.myTeams {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -100,8 +100,8 @@ img {
 
 .detailsMyBooks>p:nth-child(2),
 .deleteBook>p:nth-child(2),
-.otherBooks>p:nth-child(2),
-.myBooks>p:nth-child(2) {
+.otherTeams>p:nth-child(2),
+.myTeams>p:nth-child(2) {
     font-size: 1.2rem;
     font-weight: bold;
 }
@@ -122,7 +122,7 @@ img {
 
 .basic h1,
 .dashboard,
-.my-books h1,
+.my-teams h1,
 .home h1 {
     text-align: center;
     margin: 0rem;
@@ -157,15 +157,15 @@ div.actions a {
     padding-bottom: 1rem;
 }
 
-.my-books .my-books-list,
-.dashboard .other-books-list {
+.my-teams .my-teams-list,
+.dashboard .other-teams-list {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
 .detailsMyBooks textarea,
-.my-books textarea {
+.my-teams textarea {
     margin-bottom: 2rem;
 }
 
@@ -182,7 +182,7 @@ footer p {
     color: white;
 }
 
-.no-books {
+.no-teams {
     font-weight: bold;
     font-size: large;
     text-align: center;
@@ -193,7 +193,7 @@ textarea#description {
     resize: none;
 }
 
-.otherBooks {
+.otherTeams {
     border-radius: 10px;
     text-align: center;
     margin: 2rem;
@@ -206,15 +206,15 @@ textarea#description {
 }
 
 
-.otherBooks:hover {
+.otherTeams:hover {
     box-shadow: 30px 30px 100px 10px #000000;
 }
 
-.details > .book-information > .img {
+.details > .team-information > .img {
     width: 60%;
     align-items: center;
 }
-.details > .book-information > .button {
+.details > .team-information > .button {
     width: 30%;
     text-align: center;
 }
