@@ -4,12 +4,12 @@ import { html } from "../lib.js";
 const catalogTemplate = (teams) => html`
 <section id="dashboard-page" class="dashboard">
     <h1>Catalog</h1>
-    ${teams.length > 0 ? teams.map(teamCardTemplate): html` <p class="no-books">No teams in database!</p>`}
+    ${teams.length > 0 ? teams.map(teamCardTemplate): html` <p class="no-teams">No teams in database!</p>`}
 </section>`
 
 const teamCardTemplate = (team) => html`
-<ul class="other-books-list">
-    <li class="otherBooks">
+<ul class="other-teams-list">
+    <li class="otherTeams">
         <h3>${team.name}</h3>
         <p>Nationality: ${team.nationality}</p>
         <p class="img"><img src=${team.imageUrl}></p>
