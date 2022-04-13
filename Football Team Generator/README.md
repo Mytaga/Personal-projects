@@ -5,3 +5,4 @@ Functionality :
 - Delete team
 - Has a collection of my teams /created by the author/
 - Like team
+- Search team by name /still trying to fix it to work correct/
