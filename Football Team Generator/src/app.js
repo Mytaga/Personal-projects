@@ -9,6 +9,8 @@ import { homeView } from "./views/home.js";
 import { loginView } from "./views/login.js";
 import { myTeamsView } from "./views/myTeams.js";
 import { registerView } from "./views/register.js";
+import { searchView } from "./views/search.js";
+import { searchResponseView } from "./views/searchResponse.js";
 
 const root = document.querySelector('#content');
 
@@ -25,6 +27,8 @@ page('/create', createView);
 page('/details/:id', detailsView);
 page('/edit/:id', editView);
 page('/myTeams', myTeamsView);
+page('/search', searchView);
+page('/search/:name', searchResponseView);
 
 page.start();
 
@@ -40,7 +44,7 @@ function updateNav(){
     if(user){
         document.querySelector('#guest').style.display = 'none';
         document.querySelector('#user').style.display = 'block';
-        document.querySelector('span').textContent = `Welcome, ${user.email}`
+        document.querySelector('span').textContent = `Welcome, ${user.username}`
     } else {
         document.querySelector('#guest').style.display = 'block';
         document.querySelector('#user').style.display = 'none';

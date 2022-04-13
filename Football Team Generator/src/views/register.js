@@ -12,6 +12,12 @@ const registerTemplate = (onSubmit) => html`
                 </span>
             </p>
             <p class="field">
+                <label for="email">Username</label>
+                <span class="input">
+                    <input type="text" name="username" id="username" placeholder="Username">
+                </span>
+            </p>
+            <p class="field">
                 <label for="password">Password</label>
                 <span class="input">
                     <input type="password" name="password" id="password" placeholder="Password">
@@ -36,10 +42,11 @@ export function registerView(ctx){
 
         const formData = new FormData(event.target);
         const email = formData.get('email');
+        const username = formData.get('username');
         const password = formData.get('password');
         const rePass = formData.get('confirm-pass')
 
-        if (email == '' || password == '') {
+        if (email == '' || username == '' || password == '') {
             return alert('Please fill all fields');
         }
 
@@ -47,7 +54,7 @@ export function registerView(ctx){
             return alert('Passwords must match');
         }
 
-        await register(email, password);
+        await register(email, username, password);
         ctx.updateNav();
         ctx.page.redirect('/catalog')
     }

@@ -1322,6 +1322,7 @@
         users: {
             "847ec027-f659-4086-8032-5173e2f9c93a": {
                 email: "mitko.kralev@abv.bg",
+                usernamme: "Mytag",
                 hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
             },
         },
@@ -1373,6 +1374,15 @@
                 'imageUrl': '/images/FC_Barcelona_(crest).svg.png',
                 'nationality': 'Spain',
                 'stadium' : 'Camp Nou',
+                '_createdOn': 1617799658349
+            },
+            '54j412c4f-aj39-4d36-batb-2ad29do8c831': {
+                '_ownerId': '847ec027-f659-4086-8032-5173e2f9c93a',
+                'name': 'Juventus',
+                'titles': '36',
+                'imageUrl': '/images/165px-Juventus_FC_2017_icon_(black).svg.png',
+                'nationality': 'Italy',
+                'stadium' : 'Juventus Stadium',
                 '_createdOn': 1617799658349
             }
         },

@@ -36,6 +36,10 @@ async function getAllLikes(teamId){
     return api.get(`/data/likes?where=teamId%3D%22${teamId}%22&distinct=_ownerId&count`);
 }
 
+async function searchTeamByName(teamName){
+    return api.get('/data/teams?where=name%3D'+ teamName)
+}
+
 export {
     login,
     register,
@@ -47,5 +51,6 @@ export {
     deleteTeamById,
     getMyTeams,
     addLike,
-    getAllLikes
+    getAllLikes,
+    searchTeamByName
 }
