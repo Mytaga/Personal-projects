@@ -37,7 +37,7 @@ async function getAllLikes(teamId){
 }
 
 async function searchTeamByName(teamName){
-    return api.get('/data/teams?where=name%3D'+ teamName)
+    return api.get(`/data/teams?where=name LIKE ${teamName}`)
 }
 
 export {
