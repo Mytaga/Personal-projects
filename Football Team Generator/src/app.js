@@ -10,7 +10,7 @@ import { loginView } from "./views/login.js";
 import { myTeamsView } from "./views/myTeams.js";
 import { registerView } from "./views/register.js";
 import { searchView } from "./views/search.js";
-import { searchResponseView } from "./views/searchResponse.js";
+
 
 const root = document.querySelector('#content');
 
@@ -28,7 +28,6 @@ page('/details/:id', detailsView);
 page('/edit/:id', editView);
 page('/myTeams', myTeamsView);
 page('/search', searchView);
-page('/search/:name', searchResponseView);
 
 page.start();
 
