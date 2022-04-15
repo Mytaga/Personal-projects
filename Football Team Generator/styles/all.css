@@ -234,3 +234,10 @@ textarea#description {
     font-style:normal;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+#search-input{
+    font-size: large;
+    outline: auto;
+    outline-style: ridge;
+    background-color: #8cd4b7;
+    font-weight: bold;
+}
