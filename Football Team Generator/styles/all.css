@@ -229,13 +229,15 @@ textarea#description {
     text-align: center;
 }
 .home {
-    font-size: 100px;
-    color: rgba(0, 128, 0, 0.319);
+    font-size: 200px;
+    color: rgba(3, 21, 3, 0.319);
     font-style:normal;
+    font-weight: bolder;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 #search-input{
     font-size: large;
+    color: white;
     outline: auto;
     outline-style: ridge;
     background-color: #8cd4b7;
