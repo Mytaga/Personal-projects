@@ -1,8 +1,8 @@
-import { addLike, deleteTeamById, getAllLikes, getTeamById } from "../api/data.js";
+import { addLike, deleteTeamById, getAllLikes, getSpecificLike, getTeamById } from "../api/data.js";
 import { html } from "../lib.js";
 import { getUserData } from "../util.js";
 
-const detailsTemplate = (team, onDelete, user, isOwner, onLike, totalLikes) => html`
+const detailsTemplate = (team, onDelete, user, isOwner, onLike, totalLikes, isLiked) => html`
 <section id="details-page" class="details">
     <div class="team-information">
         <h3>${team.name}</h3>
@@ -14,7 +14,7 @@ const detailsTemplate = (team, onDelete, user, isOwner, onLike, totalLikes) => h
             ${isOwner ? html`<a class="button" href="/edit/${team._id}">Edit</a>
             <a class="button" @click=${onDelete} href="javascript:void(0)">Delete</a>` : null}
             
-            ${user && !isOwner ? html`<a class="button" @click=${onLike} href="javascript:void(0)">Like</a>` : null}
+            ${user && !isOwner && isLiked == 0 ? html`<a class="button" @click=${onLike} href="javascript:void(0)">Like</a>` : null}
             
             <div class="likes">
                 <img class="hearts" src="/images/heart.png">
@@ -31,8 +31,10 @@ export async function detailsView(ctx){
     const user = await getUserData();
     const isOwner = user && user.id == team._ownerId;
     const totalLikes = await getAllLikes(id);
+    const isLiked = await getSpecificLike(id, user.id);
+    
 
-    ctx.render(detailsTemplate(team, onDelete, user, isOwner, onLike, totalLikes));
+    ctx.render(detailsTemplate(team, onDelete, user, isOwner, onLike, totalLikes, isLiked));
 
     async function onDelete(event){
         event.preventDefault();
