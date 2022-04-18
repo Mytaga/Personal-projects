@@ -31,9 +31,13 @@ export async function detailsView(ctx){
     const user = await getUserData();
     const isOwner = user && user.id == team._ownerId;
     const totalLikes = await getAllLikes(id);
-    const isLiked = await getSpecificLike(id, user.id);
     
+    let isLiked = false;
 
+    if (user){
+        isLiked = await getSpecificLike(id, user.id);
+    };
+   
     ctx.render(detailsTemplate(team, onDelete, user, isOwner, onLike, totalLikes, isLiked));
 
     async function onDelete(event){
