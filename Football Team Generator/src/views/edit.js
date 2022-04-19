@@ -30,6 +30,12 @@ const editTemplate = (team, onSubmit) => html`
                 </span>
             </p>
             <p class="field">
+                <label for="titles">Domestic Cups</label>
+                <span class="input">
+                    <input type="text" name="cups" id="cups" value=${team.cups}>
+                </span>
+            </p>
+            <p class="field">
                 <label for="stadium">Stadium</label>
                 <span class="input">
                     <input type="text" name="stadium" id="stadium" value=${team.stadium}>
@@ -52,17 +58,19 @@ export async function editView(ctx) {
         const formData = new FormData(event.target);
         const name = formData.get('name');
         const titles = formData.get('titles');
+        const cups = formData.get('cups');
         const imageUrl = formData.get('imageUrl');
         const nationality = formData.get('nationality');
         const stadium = formData.get('stadium');
 
-        if (name == '' || titles == '' || imageUrl == '' || nationality == '' || stadium == ''){
+        if (name == '' || titles == '' || cups == '' || imageUrl == '' || nationality == '' || stadium == ''){
             return alert('Please fill all fields');
         }
 
         const data = {
             name,
             titles,
+            cups,
             imageUrl,
             nationality,
             stadium

@@ -8,6 +8,7 @@ const detailsTemplate = (team, onDelete, user, isOwner, onLike, totalLikes, isLi
         <h3>${team.name}</h3>
         <p class="type">Nationality: ${team.nationality}</p>
         <p class="type">Titles: ${team.titles}</p>
+        <p class="type">Domestic Cups: ${team.cups}</p>
         <p class="type">Stadium: ${team.stadium}</p>
         <p class="img"><img src=${team.imageUrl}></p>
         <div class="actions">

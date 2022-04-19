@@ -2,12 +2,11 @@ import { searchTeamByName } from "../api/data.js";
 import { html } from "../lib.js";
 
 const searchTemplate = (onSearch) => html`
-<section id="search-teams">
-    <h2>Filter by name</h2>
-
+<section id="dashboard-page" class="dashboard">
+    <h2>Search by name</h2>
     <div class="container">
         <input id="search-input" type="text" name="search" placeholder="Enter desired team name">
-        <button class="button-list" @click=${onSearch}>Search</button>
+        <button class="button" @click=${onSearch}>Search</button>
     </div>
 </section>
 `
