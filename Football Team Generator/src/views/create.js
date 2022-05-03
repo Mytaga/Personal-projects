@@ -5,7 +5,6 @@ const createTemplate = (onSubmit) => html`
 <section id="create-page" class="create">
     <form id="create-form" action="" method="" @submit=${onSubmit}>
         <fieldset>
-           
             <p class="field">
                 <label for="title">Name</label>
                 <span class="input">
@@ -21,7 +20,7 @@ const createTemplate = (onSubmit) => html`
             <p class="field">
                 <label for="image">Image</label>
                 <span class="input">
-                    <input type="text" name="imageUrl" id="image" placeholder="Image">
+                    <input type="text" name="imageUrl" id="image" placeholder="image">
                 </span>
             </p>
             <p class="field">
