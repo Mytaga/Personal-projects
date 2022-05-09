@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Battleship
 {
-    public enum OccupationType
+    public enum OccupationType 
     {
         [Description("o")]
         Empty,
@@ -20,7 +20,7 @@ namespace Battleship
 
         [Description("D")]
         Destroyer,
-
+            
         [Description("S")]
         Submarine,
 
@@ -32,6 +32,5 @@ namespace Battleship
 
         [Description("M")]
         Miss
-
     }
 }
