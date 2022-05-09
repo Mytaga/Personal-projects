@@ -6,7 +6,7 @@ Football Team Generator
 
 
 
-A simple application for creating football teams. 
+A simple JS application for creating football teams. 
 Functionality :
 - Add a specific team
 - Edit team 
