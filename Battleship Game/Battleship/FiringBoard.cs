@@ -6,8 +6,22 @@ using System.Threading.Tasks;
 
 namespace Battleship
 {
-    public class FiringBoard
+    public class FiringBoard : GameBoard
     {
+        public List<Coordinates> GetOpenRandomPanels() 
+        {
+            return null;
+        }
+     
+        public List<Coordinates> GetHitNieghbours()
+        {
+            return null;
+        }
 
+        public List<Panel> GetNeighbours(Coordinates coordinates)
+        {
+            return null;
+        }
     }
 }
+    
