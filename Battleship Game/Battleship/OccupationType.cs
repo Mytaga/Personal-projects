@@ -33,4 +33,9 @@ namespace Battleship
         [Description("M")]
         Miss
     }
+    public enum ShotResult
+    {
+        Miss,
+        Hit
+    }
 }
