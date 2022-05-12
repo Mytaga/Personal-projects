@@ -84,7 +84,6 @@ namespace Battleship
                 }
             }
         }
-
         public void OutputBoards()
         {
             Console.WriteLine(Name);
@@ -101,8 +100,82 @@ namespace Battleship
                     Console.Write(FiringBoard.Panels.At(row, firingColumn).Status + " ");
                 }
                 Console.WriteLine(Environment.NewLine);
+
             }
             Console.WriteLine(Environment.NewLine);
+        }
+        public Coordinates FireShot()
+        {
+            var hitNeighbours = FiringBoard.GetHitNieghbours();
+            Coordinates coords;
+
+            if (hitNeighbours.Any())
+            {
+                coords = SearchingShot();
+            }
+            else
+            {
+                coords = RandomShot();
+            }
+
+            Console.WriteLine(this.Name + " says: \"Firing shot at "
+                      + coords.Row.ToString()
+                      + ", " + coords.Column.ToString()
+                      + "\"");
+
+            return coords;
+        }
+        public Coordinates RandomShot()
+        {
+            var availablePanels = FiringBoard.GetOpenRandomPanels();
+            Random rand = new Random(Guid.NewGuid().GetHashCode());
+            var panelId = rand.Next(availablePanels.Count);
+            return availablePanels[panelId];
+        }
+        public Coordinates SearchingShot()
+        {
+            Random rand = new Random(Guid.NewGuid().GetHashCode());
+            var hitNeighbours = FiringBoard.GetHitNieghbours();
+            var neighborID = rand.Next(hitNeighbours.Count);
+            return hitNeighbours[neighborID];
+        }
+        public ShotResult ProcessShot(Coordinates coords)
+        {
+            var panel = Board.Panels.At(coords.Row, coords.Column);
+
+            if (!panel.IsOccupied)
+            {
+                Console.WriteLine(this.Name + " says: \"Miss!\"");
+                return ShotResult.Miss;
+            }
+
+            var ship = Ships.First(x => x.OccupationType == panel.OccupationType);
+            ship.Hits++;
+
+            Console.WriteLine(Name + " says: \"Hit!\"");
+
+            if (ship.IsSunk)
+            {
+                Console.WriteLine(Name + " says: \"You sunk my " + ship.Name + "!\"");
+            }
+
+            return ShotResult.Hit;
+        }
+
+        public void ProcessShotResult(Coordinates coords, ShotResult result)
+        {
+            var panel = FiringBoard.Panels.At(coords.Row, coords.Column);
+
+            switch (result)
+            {
+                case ShotResult.Hit:
+                    panel.OccupationType = OccupationType.Hit;
+                    break;
+
+                default:
+                    panel.OccupationType = OccupationType.Miss;
+                    break;
+            }
         }
     }
 }
